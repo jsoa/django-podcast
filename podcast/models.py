@@ -28,7 +28,7 @@ class ChildCategory(models.Model):
     parent = models.ForeignKey(ParentCategory, 
         related_name='child_category_parents')
     name = models.CharField(max_length=50, blank=True, 
-        hoices=settings.CHILD_CHOICES, 
+        choices=settings.CHILD_CHOICES, 
         help_text='''Please choose a child category that corresponds to its 
                      respective parent category (e.g., "Design" is a child 
                      category of "Arts").<br />If no such child category 
