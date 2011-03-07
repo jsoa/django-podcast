@@ -1,9 +1,11 @@
 from setuptools import setup, find_packages
+import podcast
 
 setup(
     name='django-podcast',
-    version='0.1dev',
+    version=podcast.get_version(),
     description='Django podcast app',
     packages=find_packages('.'),
+    include_package_data=True,
     classifiers = ['Frameword :: Django'],
 )
